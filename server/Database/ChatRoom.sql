@@ -1,0 +1,12 @@
+-- CREATE TABLE ChatRoom (
+--     Name Nvarchar(255) NOT NULL,
+--     ID INT UNIQUE NOT NULL,
+--     PRIMARY KEY (Name)
+-- )
+
+-- CREATE TABLE ChatRoomMessages(
+--    roomID int references ChatRoom(ID),
+--    author NVARCHAR(255) NOT NULL,
+--    message text NOT NULL,
+--    timestamp datetime2 NOT NULL
+-- ) 
