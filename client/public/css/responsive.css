@@ -1,0 +1,156 @@
+@media (min-width: 1200px) {
+	.container {max-width: 1170px;}
+}
+
+@media (min-width: 1550px) {}
+@media (min-width: 1900px) {}
+
+
+@media (max-width: 1366px) {}
+
+@media (max-width: 1199px) {
+	.languageSelect {margin-right: 10px;}
+	.navbar-brand {margin-right: 20px;}
+	.navDexMenu li {padding: 15px 25px;}
+	.navDexMenu li a {font-size: 18px;}
+
+	h1 {font-size: 60px;}
+	.bannerText p {font-size: 20px;}
+
+	.bannerSection{padding-top: 190px; padding-bottom: 280px;}
+	.homeVieoCol {height: 500px;}
+	.homeVideoSection {margin-top: -220px;}
+
+	.videoCaption .videoPlayBtn .playBtn {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;}
+    .videoCaption .videoPlayBtn .playBtn img{width: 18px;}
+.videoCaption .videoInfoText h2 {
+    font-size: 24px;
+}
+.videoCaption{padding: 25px;}
+.videoCaption .videoInfoText .vieoStage{margin-bottom: 10px;}
+.videoCaption .videoInfoText p{margin-bottom: 0;}
+
+.pt_100 {padding-top: 60px;}
+.videoCaption .videoInfoText{padding-right: 15px;}
+
+
+.videoLeftCol {width: calc(100% - 300px);}
+.liveChatCol {width: 300px;}
+.videoLeftCol .videoTextCaption p br{display: none;}
+
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 991px) {
+	.navbar-toggler{padding: 0;}
+	h1 {font-size: 50px;}
+	.bannerText p {font-size: 18px;}
+	.navbar-collapse{padding: 25px 0px 10px;}
+	.navMenuCont{display: none;}
+	.mobileNav {display: block;}
+	.navbar-dark .navbar-nav .nav-link {padding: 10px 0px;}
+	.navbar-dark .navbar-nav .nav-link:hover{color: #24e36e;}
+	.headLoginCol label{margin-left: 0px;}
+	.headLoginCol{flex-wrap: wrap; padding: 15px 0px;}
+	.languageSelect{width: 32px; display: inline-flex; margin-right: 0;}
+	.navSearch {max-width: 100%; width: calc(100% - 36px); display: inline-flex;}
+
+	.bannerSection {padding-top: 180px; padding-bottom: 300px; min-height: 650px;}
+	
+    .homeVieoCol {height: 400px;}
+
+
+.liveChatCol{display: none; position: fixed; z-index: 99; right: 0; bottom: 0;}
+.videoLeftCol{width: 100%; height: auto;}
+.videoLeftCol video{height: auto; min-height: 450px;}
+
+.liveChatMobileBtn{display: inline-flex; }
+.chatBody {height: calc(100vh - 130px);}
+.videoMainCol {height: auto;
+    min-height: calc(100vh - 494px);}
+
+.channelsName .channel_Ic{margin-right: 15px;}
+.channelOption li {padding: 12px 10px;}
+
+
+}
+
+@media (max-width: 860px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 767px) {
+	footer{}
+	.f_links {margin: 40px 0px 30px;}
+	.clipsCol .clipsTitle p { min-height: 48px;}
+	.homeVieoCol {height: 320px;}
+	.homeVideoSection {margin-top: -150px;}
+	.bannerSection {padding-bottom: 250px;}
+	.videoCaption .videoInfoText p {height: 38px; overflow: hidden;}
+	.videoCaption {padding: 15px;}
+	.videoCaption .videoInfoText h2 {font-size: 18px;}
+	h1 {font-size: 40px;}
+	.bannerText p br{display: none;}
+
+	.videoCaption .videoPlayBtn .playBtn {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+}
+.videoCaption .videoPlayBtn .playBtn img {width: 16px;}
+
+.pt_100 {
+    padding-top: 50px;
+}
+.clipsCol .clipsImg .playBtn {width: 40px; height: 40px; min-width: 40px; bottom: 10px; right: 10px;}
+
+.bannerText p {font-size: 16px;}
+.f_links li a {font-size: 16px;}
+.submitBtn {font-size: 18px; padding: 12px 15px;}
+
+.channelOption {padding-top: 10px; justify-content: flex-start;}
+
+header .navCont{padding: 0px;}
+.channelOption .border_btn {font-size: 16px; padding: 5px 12px;}
+
+.channelsName .channel_Ic {width: 40px; height: 40px;}
+.channelsName {font-size: 18px;}
+
+}
+
+@media (max-width: 575px) {
+.contactFormWrap {padding: 40px 20px 30px;}
+.recent_blogsCol .recent_blogsTitle h6 br{display: none;}
+
+.recent_blogsCol{margin-bottom: 25px;}
+
+}
+
+@media (max-width: 480px) {
+	.owl-theme .owl-nav{position: relative; top: 0; margin-top: 20px;}
+	.saved_Clips.owl-theme .owl-nav,
+	.recent_blogs.owl-theme .owl-nav{margin-top: 0;}
+.homeVieoCol {
+    height: 250px;
+}
+
+.videoLeftCol .videoTextCaption h3{font-size: 20px; padding-right: 0px;}
+.videoLeftCol .videoTextCaption .like__{position: unset; margin: 5px 10px 10px 0;}
+
+.videoLeftCol video {min-height: 350px;}
+
+}
+
+@media (max-width: 450px) {
+	.headLoginCol label{margin-bottom: 15px;}
+}
+
+@media (max-width: 375px) {
+	.newsletterForm button {
+    width: 90px;
+    min-width: 90px;}
+}
