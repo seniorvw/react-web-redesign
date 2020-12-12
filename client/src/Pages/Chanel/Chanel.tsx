@@ -1,5 +1,6 @@
 import React from "react";
 import TopHeader from "../../Components/TopHeader/TopHeader";
+import Footer from "../../Components/Footer/Footer";
 
 const Chanel = () => {
     return (
@@ -88,6 +89,7 @@ const Chanel = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 };
