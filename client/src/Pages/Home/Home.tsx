@@ -10,7 +10,7 @@ const Home = () => {
       <Header />
       <Banner />
       <HomePageVideo />
-      {/* <FeaturedChannels /> */}
+      <FeaturedChannels />
     </div>
   );
 };

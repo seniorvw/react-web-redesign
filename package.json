@@ -38,6 +38,7 @@
     "nodemailer": "^6.4.11",
     "nodemon": "^2.0.3",
     "react-bootstrap": "^1.0.1",
+    "react-owl-carousel": "^2.3.1",
     "react-router-dom": "^5.1.2",
     "react-scripts-ts": "^3.1.0",
     "react-sidebar": "^3.0.2",
