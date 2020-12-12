@@ -44,16 +44,73 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/fontawesome.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/sticky_script.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script>
+    $('.featured_Channels').owlCarousel({
+      loop: true,
+      margin: 10,
+      dots: false,
+      nav: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        575: {
+          items: 2,
+          margin: 20
+        },
+        768: {
+          items: 3,
+          margin: 20
+        },
+        992: {
+          items: 4,
+          margin: 20
+        },
+        1200: {
+          items: 5,
+          margin: 55,
+          loop: false
+        }
+      }
+    })
+    $('.saved_Clips, .recent_blogs').owlCarousel({
+      loop: true,
+      margin: 10,
+      dots: false,
+      nav: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2,
+          margin: 20
+        },
+        1000: {
+          items: 3,
+          margin: 20,
+          loop: false
+        },
+        1200: {
+          items: 3,
+          margin: 40,
+          loop: false
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>
