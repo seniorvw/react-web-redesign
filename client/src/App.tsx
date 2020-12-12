@@ -11,6 +11,7 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import StreamerSignupPage from "./Pages/StreamerSignupPage/StreamerSignupPage";
 import ProfileSettings from "./Pages/ProfileSettings/ProfileSettings";
+import Chanel from "./Pages/Chanel/Chanel";
 
 class App extends Component {
   render() {
@@ -19,11 +20,12 @@ class App extends Component {
         <div style={{ fontFamily: Styles.Fonts.default }}>
           <Switch>
             <Route exact path={pathConstants.Home} component={Home} />
-            <Route
+            <Route exact path={pathConstants.StreamPage} component={Chanel} />
+            {/* <Route
               exact
               path={pathConstants.StreamPage + "/:contentID"}
               component={StreamPage}
-            />
+            /> */}
             <Route exact path={pathConstants.AboutUs} component={AboutUs} />
             <Route exact path={pathConstants.contactUs} component={ContactUs} />
             <Route exact path={pathConstants.streamerSignUp} component={StreamerSignupPage} />

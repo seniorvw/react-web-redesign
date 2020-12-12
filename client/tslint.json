@@ -15,11 +15,13 @@
     "no-arg": true,
     "no-bitwise": true,
     "no-conditional-assignment": true,
-    "no-consecutive-blank-lines": false
+    "no-consecutive-blank-lines": false,
+    "object-literal-sort-keys": false
   },
   "jsRules": {
     "max-line-length": {
       "options": [120]
-    }
+    },
+    "object-literal-sort-keys": false
   }
 }
