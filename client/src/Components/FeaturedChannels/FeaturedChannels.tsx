@@ -1,7 +1,24 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
 import OwlCarousel from "react-owl-carousel";
 
 const FeaturedChannels = () => {
+
+    const [channelList, setChannelList] = useState([]);
+
+    useEffect(() => {
+        getAllChannels();
+    }, []);
+
+    const getAllChannels = () => {
+        // TODO remove filter this when we launch
+        fetch("/api/v1/dacast/channels?filter=fake")
+            .then(res => res.json())
+            .then(result => {
+                setChannelList(result.data);
+            });
+    };
+
     const carouselOptions = {
         loop: true,
         margin: 10,
@@ -42,110 +59,27 @@ const FeaturedChannels = () => {
                         </div>
                     </div>
                     <div className="col-12">
-                        <OwlCarousel
+                        {channelList.length && <OwlCarousel
                             {...carouselOptions}
                             className="owl-carousel owl-theme featured_Channels">
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_01.png" />
+                            {channelList.map((item: any, index) => {
+                                return (
+                                    <div key={index} className="item">
+                                        <a className="channelsCol">
+                                            <div className="channelsImg">
+                                                <img
+                                                    src={item && item.pictures &&
+                                                        item.pictures.thumbnail &&
+                                                        item.pictures.thumbnail[0]} />
+                                            </div>
+                                            <div className="channelsTitle">
+                                                <h5>{item.title}</h5>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div className="channelsTitle">
-                                        <h5>HXRO Labs</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_02.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>CollegeofPips</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="channels.html" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_03.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>Carl Jenison</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_04.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>Ryan Tucker</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_05.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>Lyle Cunningham</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_01.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>HXRO Labs</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_02.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>CollegeofPips</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_03.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>Carl Jenison</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_04.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>Ryan Tucker</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="#" className="channelsCol">
-                                    <div className="channelsImg">
-                                        <img src="images/channels_05.png" />
-                                    </div>
-                                    <div className="channelsTitle">
-                                        <h5>Lyle Cunningham</h5>
-                                    </div>
-                                </a>
-                            </div>
-                        </OwlCarousel>
+                                );
+                            })}
+                        </OwlCarousel>}
                     </div>
                 </div>
             </div>
