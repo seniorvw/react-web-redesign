@@ -160,7 +160,7 @@ header.sticky .navDexMenu li a{font-size: 16px;}
 
 
 .headLoginCol{display: flex; align-items: center;}
-.headLoginCol label{margin: 0px; color: #24E36E; font-size: 16px; white-space: nowrap; margin: 0px 15px;}
+.headLoginCol label{margin: 0px; color: #24E36E; font-size: 16px; white-space: nowrap; margin: 0px 15px;cursor: pointer;}
 .btn_green{background-color: #24E36E; color: #fff; font-size: 14px; font-weight: bold; border-radius: 2px; min-width: 120px; height: 34px; padding: 6px 15px; text-align: center; border: none;}
 .btn_green:hover{background-color: #363A45; color: #24E36E}
 

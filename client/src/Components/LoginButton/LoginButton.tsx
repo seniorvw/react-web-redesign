@@ -32,9 +32,9 @@ class LoginButton extends Component<ILoginButtonProps, ILoginButtonState> {
 
     return (
       <div style={{ padding: "8px" }}>
-        <Button onClick={handleShow} variant="outline-success">
+        <button className="btn_green" onClick={handleShow}>
           Log In
-        </Button>
+        </button>
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
