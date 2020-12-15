@@ -20,7 +20,7 @@ class App extends Component {
         <div style={{ fontFamily: Styles.Fonts.default }}>
           <Switch>
             <Route exact path={pathConstants.Home} component={Home} />
-            <Route exact path={pathConstants.StreamPage} component={Chanel} />
+            <Route exact path={pathConstants.StreamPage + "/:contentID"} component={Chanel} />
             {/* <Route
               exact
               path={pathConstants.StreamPage + "/:contentID"}

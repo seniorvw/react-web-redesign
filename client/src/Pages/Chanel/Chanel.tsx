@@ -1,8 +1,28 @@
 import React from "react";
 import TopHeader from "../../Components/TopHeader/TopHeader";
 import Footer from "../../Components/Footer/Footer";
+import StreamObject from "../../Components/StreamObject/StreamObject";
+import * as Styles from "../../Util/Styles";
 
-const Chanel = () => {
+const Chanel = (props: any) => {
+
+    const contentID = props.match.params.contentID;
+    const getChatRoomWidth = () => {
+        const maxWidth = 400;
+        const minWidth = 200;
+        const twentyPercentWidth = window.innerWidth / 5;
+        if (twentyPercentWidth > maxWidth) {
+            return maxWidth;
+        } else if (twentyPercentWidth < minWidth) {
+            return minWidth;
+        } else {
+            return twentyPercentWidth;
+        }
+    };
+    const chatRoomWidth = getChatRoomWidth();
+    const streamWidth = (window.innerWidth - chatRoomWidth).toString();
+    const windowHeight = (window.innerHeight - Styles.headerAndFooterHeight()).toString();
+
     return (
         <div>
             <header className="noFixHeader">
@@ -30,11 +50,10 @@ const Chanel = () => {
                     <div className="row">
                         <div className="col-12 videoMainCol">
                             <div className="videoLeftCol">
-                                <video width="320" height="240" controls>
-                                    <source src="video.mp4" type="video/mp4" />
-                                    <source src="video.ogg" type="video/ogg" />
-                                    Your browser does not support the video tag.
-                                    </video>
+                                <StreamObject
+                                    contentID={"181053_c_" + contentID}
+                                    width={streamWidth}
+                                    height={windowHeight} />
                                 <div className="videoTextCaption">
                                     <div className="videoTH">
                                         <h3>HXRO Labs Live - EP. 61 - w/ RT and Nick Cote</h3>
