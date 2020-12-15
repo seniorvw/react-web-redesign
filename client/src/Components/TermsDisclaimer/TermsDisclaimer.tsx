@@ -22,20 +22,13 @@ class TermsDisclaimer extends Component<{}, ITermsDisclaimerState> {
     const handleShow = () => this.setShow(true);
 
     return (
-      <div style={{ zIndex: 10 }}>
-        <div onClick={handleShow} style={{ width: "375px", fontSize: "small", display: "inline-flex", zIndex: 10 }}>
-          By using this site, you agree to our&nbsp;
-          <div style={{
-            color: Styles.Colors.green,
-            cursor: "pointer",
-            fontSize: "12px",
-            textDecoration: "underline"
-          }}>
-            Terms and Conditions
+      <div className="container-fluid copyRightBar">
+        <div className="row">
+          <div className="col-lg-12">
+            <p>Copyright 2020 <span>TXTR</span> All Right Reserved</p>
+            <p>By using this site, you agree to our <span onClick={handleShow}> Terms and Conditions </span> </p>
           </div>
         </div>
-
-
         <Modal style={{ zIndex: 1060 }} show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Terms of Use</Modal.Title>

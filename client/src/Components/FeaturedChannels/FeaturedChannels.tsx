@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import OwlCarousel from "react-owl-carousel";
+import * as pathConstants from "../../Util/PathConstants";
 
 const FeaturedChannels = () => {
 
@@ -65,7 +66,7 @@ const FeaturedChannels = () => {
                             {channelList.map((item: any, index) => {
                                 return (
                                     <div key={index} className="item">
-                                        <a className="channelsCol">
+                                        <a href={pathConstants.StreamPage + "/" + item.id} className="channelsCol">
                                             <div className="channelsImg">
                                                 <img
                                                     src={item && item.pictures &&

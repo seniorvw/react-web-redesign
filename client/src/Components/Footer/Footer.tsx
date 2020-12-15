@@ -1,8 +1,9 @@
 import React from "react";
+import TermsDisclaimer from "../TermsDisclaimer/TermsDisclaimer";
 
 const Footer = () => {
     return (
-        <footer className="beforeNone">
+        <>
             <div className="container">
                 <div className="row">
                     <div className="col-md-5">
@@ -34,15 +35,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid copyRightBar">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <p>Copyright 2020 <span>TXTR</span> All Right Reserved</p>
-                        <p>By using this site, you agree to our <span>Terms and Conditions</span> </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+           <TermsDisclaimer />
+        </>
     );
 };
 

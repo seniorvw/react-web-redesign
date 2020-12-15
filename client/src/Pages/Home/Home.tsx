@@ -6,7 +6,7 @@ import FeaturedChannels from "../../Components/FeaturedChannels/FeaturedChannels
 import SavedClips from "../../Components/SavedClips/SavedClips";
 import RecentBlogs from "../../Components/RecentBlogs/RecentBlogs";
 import ContactUs from "../../Components/ContactUs/ContactUs";
-import HomeFooter from "../../Components/HomeFooter/HomeFooter";
+import Footer from "src/Components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -18,7 +18,9 @@ const Home = () => {
       <SavedClips />
       <RecentBlogs />
       <ContactUs />
-      <HomeFooter />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

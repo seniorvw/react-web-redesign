@@ -94,7 +94,9 @@ const Chanel = (props: any) => {
                     </div>
                 </div>
             </section>
-            <Footer />
+            <footer className="beforeNone">
+                <Footer />
+            </footer>
         </div>
     );
 };
