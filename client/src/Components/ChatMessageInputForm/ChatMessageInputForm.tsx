@@ -19,7 +19,7 @@ class ChatMessageInputForm extends Component<IChatMessageInputFormProps> {
           <Form.Group style={{ width: "inherit", marginRight: "12px" }} controlId="formMessage">
             <Form.Control style={{ resize: "none" }} as="textarea" rows={2} placeholder="Message" />
           </Form.Group>
-          <button type="submit">
+          <button style={{ outline: "none" }} type="submit">
             <img src="images/sendMsg.svg" />
           </button>
         </Form>
