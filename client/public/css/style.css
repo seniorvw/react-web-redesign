@@ -341,12 +341,12 @@ footer h5{color: #fff;font-weight: 400;font-family: 'Proxima Nova Lt'; margin-bo
 #LoginModal .close{color: #fff; opacity: 1; padding: 18px 20px; position: absolute; right: 0px; font-size: 16px; font-weight: normal; text-shadow: none; display: inline-flex; align-items: center;}
 #LoginModal .close i{font-size: 20px; margin-left: 15px;}
 
-#BecomeStreamerModal{background: url(../images/bg_2.jpg) center no-repeat; background-size: cover;}
-#BecomeStreamerModal .modal-content{background-color: transparent; border: none;}
-#BecomeStreamerModal .modal-header{border: none;}
-#BecomeStreamerModal .modal-title{color: #fff; font-size: 24px;}
-#BecomeStreamerModal .close{color: #fff; opacity: 1; padding: 18px 20px; position: absolute; right: 0px; font-size: 16px; font-weight: normal; text-shadow: none; display: inline-flex; align-items: center;}
-#BecomeStreamerModal .close i{font-size: 20px; margin-left: 15px;}
+.BecomeStreamerModal{background: url(../images/bg_2.jpg) center no-repeat; background-size: cover;}
+.BecomeStreamerModal .modal-content{background-color: transparent; border: none;}
+.BecomeStreamerModal .modal-header{border: none;}
+.BecomeStreamerModal .modal-title{color: #fff; font-size: 24px;}
+.BecomeStreamerModal .close{color: #fff; opacity: 1; padding: 18px 20px; position: absolute; right: 0px; font-size: 16px; font-weight: normal; text-shadow: none; display: inline-flex; align-items: center;}
+.BecomeStreamerModal .close i{font-size: 20px; margin-left: 15px;}
 
 
 .noFixHeader{position: relative !important;}

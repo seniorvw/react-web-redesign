@@ -46,7 +46,7 @@ const TopHeader = (props: any) => {
                     </div>
                 </div>
             </div>
-            <Modal id="BecomeStreamerModal" show={show} onHide={handleClose}>
+            <Modal className="BecomeStreamerModal" show={show} onHide={handleClose}>
                 <div className="modal-header">
                     <h4 className="modal-title">Send us an email</h4>
                 </div>

@@ -36,7 +36,7 @@ class LoginButton extends Component<ILoginButtonProps, ILoginButtonState> {
           Log In
         </button>
 
-        <Modal id="LoginModal" show={show} onHide={handleClose}>
+        <Modal className="BecomeStreamerModal" show={show} onHide={handleClose}>
           <div className="modal-header">
             <h4 className="modal-title">Log In</h4>
           </div>
