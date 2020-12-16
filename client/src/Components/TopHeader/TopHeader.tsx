@@ -8,6 +8,7 @@ import { ISiteState } from "../../Store/state";
 import { IUser } from "../../Store/models";
 import { setLoginState } from "../../Store/actions";
 import LoginButton from "../LoginButton/LoginButton";
+import UserDropDown from "../UserDropDown/UserDropDown";
 
 const TopHeader = (props: any) => {
 
@@ -37,10 +38,16 @@ const TopHeader = (props: any) => {
                                     <input type="text" placeholder="Search for Channels" name="search" />
                                     <button type="submit"><i className="fa fa-search"></i></button>
                                 </form>
-                                <div className="ml-auto headLoginCol">
+                                {(!(props.user)) && (<div className="ml-auto headLoginCol">
                                     <label onClick={handleShow}>Interested in becoming a streamer?</label>
                                     <LoginButton onLogin={props.updateLoginState} />
-                                </div>
+                                </div>)}
+                                {props.user && (
+                                    <UserDropDown
+                                        onLogout={props.updateLoginState}
+                                        user={props.user}
+                                    />
+                                )}
                             </div>
                         </nav>
                     </div>
