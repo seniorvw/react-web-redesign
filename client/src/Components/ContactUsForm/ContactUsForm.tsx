@@ -25,7 +25,7 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
 
         return (
             <div style={{ width: this.props.width, margin: "0 auto" }}>
-                <Form style={{ padding: "8px" }} onSubmit={this.handleSubmit}>
+                <Form className="modalLoginForm" style={{ padding: "8px" }} onSubmit={this.handleSubmit}>
                     <Form.Group controlId="formName">
                         {!!!this.props.isStreamerSignUp &&
                             <Form.Label>Name</Form.Label>

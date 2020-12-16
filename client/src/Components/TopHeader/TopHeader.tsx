@@ -46,16 +46,13 @@ const TopHeader = (props: any) => {
                     </div>
                 </div>
             </div>
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Send us an email</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
+            <Modal id="BecomeStreamerModal" show={show} onHide={handleClose}>
+                <div className="modal-header">
+                    <h4 className="modal-title">Send us an email</h4>
+                </div>
+                <div className="modal-body">
                     <ContactUsForm width="400px" subject={emailSubject} message={emailBody} />
-                </Modal.Body>
-                <Modal.Footer>
-                    <TermsDisclaimer />
-                </Modal.Footer>
+                </div>
             </Modal>
         </div>
     );
