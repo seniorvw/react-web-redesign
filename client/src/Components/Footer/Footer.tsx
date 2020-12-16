@@ -1,4 +1,5 @@
 import React from "react";
+import NewsletterPrompt from "../NewsletterPrompt/NewsletterPrompt";
 import TermsDisclaimer from "../TermsDisclaimer/TermsDisclaimer";
 
 const Footer = () => {
@@ -20,19 +21,12 @@ const Footer = () => {
                     </div>
                     <div className="col-md-3">
                         <ul className="f_links">
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="index.html#contactFormWrap">CONTACT US</a></li>
+                            <li><a href="/">HOME</a></li>
+                            <li><a href="/about-us">ABOUT</a></li>
+                            <li><a href="/#contacSection">CONTACT US</a></li>
                         </ul>
                     </div>
-                    <div className="col-md-4 newsletterCol">
-                        <h5>Newsletter</h5>
-                        <p>Join our newsletter to get updates</p>
-                        <form className="newsletterForm">
-                            <input type="text" name="" placeholder="Enter your email" />
-                            <button type="button">JOIN</button>
-                        </form>
-                    </div>
+                   <NewsletterPrompt />
                 </div>
             </div>
            <TermsDisclaimer />

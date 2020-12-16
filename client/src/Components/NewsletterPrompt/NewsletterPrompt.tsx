@@ -15,68 +15,37 @@ class NewsletterPrompt extends Component<{}, INewsletterPromptState> {
 
     this.state = {
       response: undefined,
-      showModal: false,
       showSpinner: false
     };
   }
 
   render() {
-    const { showModal, showSpinner, response } = this.state;
-
-    const handleClose = () => this.setShow(false);
-    const handleShow = () => this.setShow(true);
+    const { showSpinner, response } = this.state;
 
     return (
-      <div style={{ zIndex: 10, textAlign: "center" }}>
-        <div onClick={handleShow} style={{
-          color: "white",
-          display: "inline-flex",
-          fontSize: "small",
-          width: "fit-content"
-        }}>
-          Click here if you want to join our&nbsp;
-          <div style={{
-            color: Styles.Colors.green,
-            cursor: "pointer",
-            fontSize: "12px",
-            textDecoration: "underline"
-          }}>
-            Newsletter
-          </div>
-        </div>
-
-
-        <Modal show={showModal} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Join our Newsletter</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            Hey, want to get updates about our launch? Enter your email address
-            below and we'll keep you in the loop.
-            <Form style={{ paddingTop: "16px" }} onSubmit={this.handleSubmit}>
-              <Form.Group controlId="formEmail">
-                <Form.Control
-                  style={{ width: "80%" }}
-                  type="email"
-                  placeholder="Email"
-                  required={true} />
-              </Form.Group>
-              <div style={{ display: "inline-block" }}>
-                <Button variant="success" type="submit">
-                  Subscribe
-                  {showSpinner &&
-                    <Spinner
-                      style={{ verticalAlign: "middle", margin: "8px" }}
-                      animation="border"
-                      variant="light"
-                      size="sm" />}
-                </Button>
-                {response &&
-                  this.renderResponseMessage()}
-              </div>
-            </Form>
-          </Modal.Body>
-        </Modal>
+      <div className="col-md-4 newsletterCol">
+        <h5>Newsletter</h5>
+        <p>Join our newsletter to get updates</p>
+        <Form onSubmit={this.handleSubmit} className="newsletterForm">
+          <Form.Group controlId="formEmail">
+            <Form.Control
+              custom={true}
+              type="email"
+              placeholder="Enter your email"
+              required={true} />
+          </Form.Group>
+          <button className="btn_" type="submit">
+            Join
+                {showSpinner &&
+              <Spinner
+                style={{ verticalAlign: "middle", margin: "8px" }}
+                animation="border"
+                variant="light"
+                size="sm" />}
+          </button>
+        </Form>
+        {response &&
+          this.renderResponseMessage()}
       </div>
     );
   }
@@ -88,16 +57,10 @@ class NewsletterPrompt extends Component<{}, INewsletterPromptState> {
       message = "Great! You'll hear from us shortly.";
     }
     return (
-      <div style={{ paddingTop: "16px" }}>
+      <div style={{ paddingTop: "16px", color: "#a54747" }}>
         {message}
       </div>
     );
-  }
-
-  private setShow = (shouldShow: boolean) => {
-    this.setState({
-      showModal: shouldShow
-    });
   }
 
   private handleSubmit = (event: any) => {
@@ -117,7 +80,6 @@ class NewsletterPrompt extends Component<{}, INewsletterPromptState> {
     Requests.postData("/api/v1/feedback/sendEmail", data, /*useAuth*/ false).then(res => {
       this.setState({
         response: res,
-        showModal: true,
         showSpinner: false,
       });
     });
