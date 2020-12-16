@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+﻿import React, { Component } from "react";
 
 // @ts-ignore
 import ZackImage from "../../Assets/zack.png";
@@ -53,7 +53,6 @@ class AboutUs extends Component<any> {
           <Card
             style={{
               alignItems: "center",
-              border: "none",
               padding: "0px",
             }}
           >
