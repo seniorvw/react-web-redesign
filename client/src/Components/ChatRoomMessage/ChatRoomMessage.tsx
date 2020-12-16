@@ -15,26 +15,11 @@ class ChatRoomMessage extends Component<IChatRoomMessageProps> {
     const messageWidth = (width - authorWidth - 16).toString() + "px";
 
     return (
-      <div style={{ display: "inline-flex" }}>
-        {/* Author */}
-        <div style={{
-          color: authorColor,
-          display: "inline-block",
-          fontWeight: "bold",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
-          width: authorWidth.toString() + "px"
-        }}
-          title={message.author}>
-          {message.author}
-        </div>
-        {/* Message */}
-        <div style={{ padding: "4px", width: messageWidth, wordWrap: "break-word" }}>
-          <span style={{ color: Styles.Colors.textOnBlackBackground }}>
-            {message.message}
-          </span>
-        </div>
+      <div className="message__">
+        <h6 className="messageBy">
+          {message.author} <span className="postTime">an hour ago</span>
+        </h6>
+        <p>{message.message}</p>
       </div>
     );
   }

@@ -55,21 +55,34 @@ class ChatRoom extends Component<IChatRoomProps, IChatRoomState> {
     const messagesHeight = windowHeight - inputFormHeight - headerHeight - 16;
 
     return (
-      <div style={{ margin: "0px 8px", height: windowHeight.toString() + "px" }}>
-        <ChatRoomHeader channelId={this.props.roomId} height={headerHeight} />
-        <div style={{
-          fontSize: "smaller",
-          height: messagesHeight.toString() + "px",
-          marginBottom: "8px",
-          overflowY: "scroll",
-          ...this.getMessagesDivStyle()
-        }}>
+      <div className="liveChatCol">
+        <div className="chatHead">
+          <div className="chatTitle"><img src="images/chatboxes.svg" /> Live Chat</div>
+          <div className="chatBoxOpt">
+            <button type="button" className="minimize"></button>
+            <button type="button"><img src="images/expand.svg" /></button>
+          </div>
+        </div>
+        <div className="chatBody">
+          <div className="message__">
+            <h6 className="messageBy">Elegant joylin
+                  <span className="postTime">an hour ago</span></h6>
+            <p>hi guys, welcome to our livestream today.<br />
+                  if you have questions, feel free to ask.<br />
+                  here in the livechat or in my social media or groups.</p>
+            <p>TG: <a href="https://t.me/cautious_trader" target="_blank">
+              https://t.me/cautious_trader</a></p>
+            <p>BTSE: <a href="https://t.me/btse_philippines" target="_blank">
+              https://t.me/btse_philippines</a></p>
+            <p>AToken: <a href="https://t.me/atokenphilippine" target="_blank">
+              https://t.me/atokenphilippine</a></p>
+            <p>YT: <a href="https://bit.ly/3enuXdj" target="_blank">
+              https://bit.ly/3enuXdj</a></p>
+            <p>Let's start.</p>
+          </div>
           {this.renderMessages()}
         </div>
-        <div style={{ height: inputFormHeight.toString() + "px" }}>
-          <ChatMessageInputForm roomId={this.props.roomId} handleSubmit={this.handleSubmitMessage} />
-        </div>
-        {this.renderChatHandlePrompt()}
+        <ChatMessageInputForm roomId={this.props.roomId} handleSubmit={this.handleSubmitMessage} />
       </div>
     );
   }
