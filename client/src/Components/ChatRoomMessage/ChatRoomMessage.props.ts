@@ -4,4 +4,5 @@ export interface IChatRoomMessageProps {
     authorColor: string;
     message: IChatMessage;
     width: number;
+    time: string;
 }

@@ -64,22 +64,6 @@ class ChatRoom extends Component<IChatRoomProps, IChatRoomState> {
           </div>
         </div>
         <div className="chatBody">
-          <div className="message__">
-            <h6 className="messageBy">Elegant joylin
-                  <span className="postTime">an hour ago</span></h6>
-            <p>hi guys, welcome to our livestream today.<br />
-                  if you have questions, feel free to ask.<br />
-                  here in the livechat or in my social media or groups.</p>
-            <p>TG: <a href="https://t.me/cautious_trader" target="_blank">
-              https://t.me/cautious_trader</a></p>
-            <p>BTSE: <a href="https://t.me/btse_philippines" target="_blank">
-              https://t.me/btse_philippines</a></p>
-            <p>AToken: <a href="https://t.me/atokenphilippine" target="_blank">
-              https://t.me/atokenphilippine</a></p>
-            <p>YT: <a href="https://bit.ly/3enuXdj" target="_blank">
-              https://bit.ly/3enuXdj</a></p>
-            <p>Let's start.</p>
-          </div>
           {this.renderMessages()}
         </div>
         <ChatMessageInputForm roomId={this.props.roomId} handleSubmit={this.handleSubmitMessage} />
@@ -129,18 +113,11 @@ class ChatRoom extends Component<IChatRoomProps, IChatRoomState> {
       const messageTime = new Date(m.timestamp);
       // Get the time difference in milliseconds, then divide by 1000 for
       // seonds then check if it is greater than 60*30 seconds (30 min)
-      if (((messageTime.getTime() - lastTimestamp.getTime()) / 1000) > (60 * 30)) {
-        returnElement.push(
-          this.getTimestampSeparator(m.timestamp)
-        );
-      }
       const authorColor = this.getAuthorColor(m.author);
-      returnElement.push(<ChatRoomMessage message={m} width={this.props.width} authorColor={authorColor} />);
+      returnElement.push(<ChatRoomMessage time={this.getReadableTimestamp(m.timestamp)}
+message={m} width={this.props.width} authorColor={authorColor} />);
       lastTimestamp = messageTime;
     });
-    returnElement.push(
-      <div ref={endOfMessagesEl => { this.endOfMessagesEl = endOfMessagesEl; }} />
-    );
 
     return returnElement;
   }

@@ -26,3 +26,4 @@ yarn-error.log*
 # Test output
 **/output/
 **/__pycache__/
+server/Database/database.js

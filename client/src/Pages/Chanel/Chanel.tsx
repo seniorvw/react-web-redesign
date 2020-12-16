@@ -9,7 +9,7 @@ const Chanel = (props: any) => {
 
     const contentID = props.match.params.contentID;
     const chatRoomWidth = 450;
-    const streamWidth = (window.innerWidth - chatRoomWidth).toString();
+    const streamWidth = (window.innerWidth - 20 - chatRoomWidth).toString();
     const windowHeight = (window.innerHeight - Styles.headerAndFooterHeight()).toString();
 
     return (
@@ -53,7 +53,7 @@ const Chanel = (props: any) => {
                                         Nullam metus diam</p>
                             </div>
                         </div>
-                        <ChatRoom roomId={"181053_c_" + contentID} width={chatRoomWidth} />
+                        <ChatRoom roomId={contentID} width={chatRoomWidth} />
                     </div>
                 </div>
             </section>
