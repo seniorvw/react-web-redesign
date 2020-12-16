@@ -45,7 +45,7 @@ class LoginButton extends Component<ILoginButtonProps, ILoginButtonState> {
               {/* Username/email input */}
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control required type="email" placeholder="Enter email" />
+                <Form.Control custom={true} required type="email" placeholder="Enter email" />
                 <Form.Control.Feedback type="invalid">
                   Please provide a valid username.
                 </Form.Control.Feedback>
@@ -53,7 +53,7 @@ class LoginButton extends Component<ILoginButtonProps, ILoginButtonState> {
               {/* Password input */}
               <Form.Group controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control required type="password" placeholder="Password" />
+                <Form.Control custom={true} required type="password" placeholder="Password" />
                 <Form.Control.Feedback type="invalid">
                   Please provide a valid password.
                 </Form.Control.Feedback>

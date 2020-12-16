@@ -32,6 +32,7 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                         }
                         <Form.Control
                             type="text"
+                            custom={true}
                             placeholder="Name"
                             required={true} />
                     </Form.Group>
@@ -41,6 +42,7 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                         }
                         <Form.Control
                             type="email"
+                            custom={true}
                             placeholder="Email"
                             required={true} />
                     </Form.Group>
@@ -49,6 +51,7 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                             <Form.Label>Subject</Form.Label>
                             <Form.Control
                                 type="name"
+                                custom={true}
                                 placeholder="Subject"
                                 required={true}
                                 defaultValue={this.props.subject} />
@@ -61,8 +64,10 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                         <Form.Control
                             as="textarea"
                             rows={5}
+                            custom={true}
                             required={!!!this.props.isStreamerSignUp}
                             placeholder="Message"
+                            className="textareaCss"
                             defaultValue={this.props.message} />
                     </Form.Group>
 

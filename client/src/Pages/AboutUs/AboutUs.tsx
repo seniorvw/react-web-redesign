@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import WebsiteHeader from "../../Components/WebsiteHeader/WebsiteHeader";
-import WebsiteFooter from "../../Components/WebsiteFooter/WebsiteFooter";
 
 // @ts-ignore
 import ZackImage from "../../Assets/zack.png";
@@ -17,6 +15,8 @@ import * as Styles from "../../Util/Styles";
 import FounderBio from "../../Components/FounderBio/FounderBio";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
+import TopHeader from "src/Components/TopHeader/TopHeader";
+import Footer from "src/Components/Footer/Footer";
 
 class AboutUs extends Component<any> {
   constructor(props: any) {
@@ -35,8 +35,9 @@ class AboutUs extends Component<any> {
 
     return (
       <div>
-        <WebsiteHeader />
-
+        <header className="noFixHeader">
+          <TopHeader />
+        </header>
         <div
           style={{
             alignItems: "center",
@@ -90,7 +91,9 @@ class AboutUs extends Component<any> {
           We’d love to hear your feedback. Sends us your ideas through the
           Contact Us button at the bottom of the page.
         </div>
-        <WebsiteFooter />
+        <footer className="beforeNone">
+          <Footer />
+        </footer>
       </div>
     );
   }
