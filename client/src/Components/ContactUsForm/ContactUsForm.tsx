@@ -24,14 +24,13 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
         const buttonMessage = this.props.isStreamerSignUp ? "Join Us!" : "Send";
 
         return (
-            <div style={{ width: this.props.width, margin: "0 auto" }}>
-                <Form className="modalLoginForm" style={{ padding: "8px" }} onSubmit={this.handleSubmit}>
+            <div>
+                <Form className="modalLoginForm" onSubmit={this.handleSubmit}>
                     <Form.Group controlId="formName">
                         {!!!this.props.isStreamerSignUp &&
                             <Form.Label>Name</Form.Label>
                         }
                         <Form.Control
-                            style={{ width: this.props.width }}
                             type="text"
                             placeholder="Name"
                             required={true} />
@@ -41,7 +40,6 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                             <Form.Label>Email address</Form.Label>
                         }
                         <Form.Control
-                            style={{ width: this.props.width }}
                             type="email"
                             placeholder="Email"
                             required={true} />
@@ -50,7 +48,6 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                         <Form.Group controlId="formSubject">
                             <Form.Label>Subject</Form.Label>
                             <Form.Control
-                                style={{ width: this.props.width }}
                                 type="name"
                                 placeholder="Subject"
                                 required={true}
@@ -62,7 +59,6 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                             <Form.Label>Message</Form.Label>
                         }
                         <Form.Control
-                            style={{ width: this.props.width }}
                             as="textarea"
                             rows={5}
                             required={!!!this.props.isStreamerSignUp}
@@ -70,8 +66,8 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                             defaultValue={this.props.message} />
                     </Form.Group>
 
-                    <div style={{ display: "inline-block" }}>
-                        <Button variant="success" type="submit">
+                    <div className="form-group">
+                        <button className="btn_" type="submit">
                             {buttonMessage}
                             {showSpinner &&
                                 <Spinner
@@ -79,7 +75,7 @@ class ContactUsForm extends Component<IContactUsFormProps, IContactUsFormState> 
                                     animation="border"
                                     variant="light"
                                     size="sm" />}
-                        </Button>
+                        </button>
                     </div>
                 </Form>
                 {response && showModal && this.renderResponseMessage()}

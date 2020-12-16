@@ -36,12 +36,12 @@ class LoginButton extends Component<ILoginButtonProps, ILoginButtonState> {
           Log In
         </button>
 
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Sign in to your account</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form onSubmit={this.handleSubmit}>
+        <Modal id="LoginModal" show={show} onHide={handleClose}>
+          <div className="modal-header">
+            <h4 className="modal-title">Log In</h4>
+          </div>
+          <div className="modal-body">
+            <Form className="modalLoginForm" onSubmit={this.handleSubmit}>
               {/* Username/email input */}
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -60,11 +60,11 @@ class LoginButton extends Component<ILoginButtonProps, ILoginButtonState> {
               </Form.Group>
               {failureState !== LoginFailure.NONE &&
                 this.renderFailureMessage()}
-              <Button variant="success" type="submit">
-                Log In
-              </Button>
+              <div className="form-group">
+                <button className="btn_" type="submit">Log In</button>
+              </div>
             </Form>
-          </Modal.Body>
+          </div>
         </Modal>
       </div>
     );
