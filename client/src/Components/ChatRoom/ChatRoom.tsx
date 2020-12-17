@@ -67,6 +67,7 @@ class ChatRoom extends Component<IChatRoomProps, IChatRoomState> {
           {this.renderMessages()}
         </div>
         <ChatMessageInputForm roomId={this.props.roomId} handleSubmit={this.handleSubmitMessage} />
+        {this.renderChatHandlePrompt()}
       </div>
     );
   }
