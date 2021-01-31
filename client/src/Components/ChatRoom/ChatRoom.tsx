@@ -55,20 +55,18 @@ class ChatRoom extends Component<IChatRoomProps, IChatRoomState> {
     const messagesHeight = windowHeight - inputFormHeight - headerHeight - 16;
 
     return (
-      <div style={{ margin: "0px 8px", height: windowHeight.toString() + "px" }}>
-        <ChatRoomHeader channelId={this.props.roomId} height={headerHeight} />
-        <div style={{
-          fontSize: "smaller",
-          height: messagesHeight.toString() + "px",
-          marginBottom: "8px",
-          overflowY: "scroll",
-          ...this.getMessagesDivStyle()
-        }}>
+      <div className="liveChatCol">
+        <div className="chatHead">
+          <div className="chatTitle"><img src="images/chatboxes.svg" /> Live Chat</div>
+          <div className="chatBoxOpt">
+            <button type="button" className="minimize"></button>
+            <button type="button"><img src="images/expand.svg" /></button>
+          </div>
+        </div>
+        <div className="chatBody">
           {this.renderMessages()}
         </div>
-        <div style={{ height: inputFormHeight.toString() + "px" }}>
-          <ChatMessageInputForm roomId={this.props.roomId} handleSubmit={this.handleSubmitMessage} />
-        </div>
+        <ChatMessageInputForm roomId={this.props.roomId} handleSubmit={this.handleSubmitMessage} />
         {this.renderChatHandlePrompt()}
       </div>
     );
@@ -116,18 +114,11 @@ class ChatRoom extends Component<IChatRoomProps, IChatRoomState> {
       const messageTime = new Date(m.timestamp);
       // Get the time difference in milliseconds, then divide by 1000 for
       // seonds then check if it is greater than 60*30 seconds (30 min)
-      if (((messageTime.getTime() - lastTimestamp.getTime()) / 1000) > (60 * 30)) {
-        returnElement.push(
-          this.getTimestampSeparator(m.timestamp)
-        );
-      }
       const authorColor = this.getAuthorColor(m.author);
-      returnElement.push(<ChatRoomMessage message={m} width={this.props.width} authorColor={authorColor} />);
+      returnElement.push(<ChatRoomMessage time={this.getReadableTimestamp(m.timestamp)}
+message={m} width={this.props.width} authorColor={authorColor} />);
       lastTimestamp = messageTime;
     });
-    returnElement.push(
-      <div ref={endOfMessagesEl => { this.endOfMessagesEl = endOfMessagesEl; }} />
-    );
 
     return returnElement;
   }

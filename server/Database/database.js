@@ -5,9 +5,9 @@ const telemetryClient = appInsights.defaultClient;
 class Database {
   constructor() {
     this._dbConfig = {
-      server: "p13041.database.windows1.com",
+      server: "p13041.database.windows.net",
       database: "p13041",
-      user: "sleneza1",
+      user: "slengieza1",
       password: this._getDBPat(),
       port: 1433,
       options: {
@@ -18,7 +18,7 @@ class Database {
   }
 
   _getDBPat() {
-    return "p13041";
+    return "slengieza1";
   }
 
   _checkNotEmpty(str) {

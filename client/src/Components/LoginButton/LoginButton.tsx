@@ -36,16 +36,16 @@ class LoginButton extends Component<ILoginButtonProps, ILoginButtonState> {
           Log In
         </button>
 
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Sign in to your account</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form onSubmit={this.handleSubmit}>
+        <Modal className="BecomeStreamerModal" show={show} onHide={handleClose}>
+          <div className="modal-header">
+            <h4 className="modal-title">Log In</h4>
+          </div>
+          <div className="modal-body">
+            <Form className="modalLoginForm" onSubmit={this.handleSubmit}>
               {/* Username/email input */}
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control required type="email" placeholder="Enter email" />
+                <Form.Control custom={true} required type="email" placeholder="Enter email" />
                 <Form.Control.Feedback type="invalid">
                   Please provide a valid username.
                 </Form.Control.Feedback>
@@ -53,18 +53,18 @@ class LoginButton extends Component<ILoginButtonProps, ILoginButtonState> {
               {/* Password input */}
               <Form.Group controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control required type="password" placeholder="Password" />
+                <Form.Control custom={true} required type="password" placeholder="Password" />
                 <Form.Control.Feedback type="invalid">
                   Please provide a valid password.
                 </Form.Control.Feedback>
               </Form.Group>
               {failureState !== LoginFailure.NONE &&
                 this.renderFailureMessage()}
-              <Button variant="success" type="submit">
-                Log In
-              </Button>
+              <div className="form-group">
+                <button className="btn_" type="submit">Log In</button>
+              </div>
             </Form>
-          </Modal.Body>
+          </div>
         </Modal>
       </div>
     );

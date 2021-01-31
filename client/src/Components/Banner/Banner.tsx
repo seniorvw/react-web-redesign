@@ -33,16 +33,16 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Send us an email</Modal.Title>
-                </Modal.Header>
+            <Modal className="BecomeStreamerModal" show={show} onHide={handleClose}>
+                <div className="modal-header">
+                    <h4 className="modal-title">Send us an email</h4>
+                </div>
                 <Modal.Body>
                     <ContactUsForm width="400px" subject={emailSubject} message={emailBody} />
                 </Modal.Body>
-                <Modal.Footer>
+                {/* <Modal.Footer>
                     <TermsDisclaimer />
-                </Modal.Footer>
+                </Modal.Footer> */}
             </Modal>
         </section>
     );

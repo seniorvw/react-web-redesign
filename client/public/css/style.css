@@ -169,7 +169,7 @@ header.sticky .navDexMenu li a{font-size: 16px;}
 .navDexMenu{display: flex; width: 100%; align-items: center; justify-content: flex-end;}
 .navDexMenu li{padding: 30px;}
 .navDexMenu li:last-child{padding-right: 0px;}
-.navDexMenu li a{color: #FFFFFF; font-size: 20px; text-transform: uppercase; font-family: 'Proxima Nova Lt'; font-weight: 600;}
+.navDexMenu li a{color: #FFFFFF; font-size: 20px; text-transform: uppercase; font-family: 'Proxima Nova Lt'; font-weight: 400;}
 .navDexMenu li a.active{color: #24E36E;}
 .navDexMenu li a:hover{color: #24E36E;}
 
@@ -291,7 +291,7 @@ header.sticky .navDexMenu li a{font-size: 16px;}
 .inputCss::placeholder,
 .textareaCss::placeholder{color: #B3B3B3;}
 
-.submitBtn{font-size: 20px; font-weight: 600; color: #fff; background-color: #24E36E; border: none; width: 170px; text-align: center; padding: 14px 15px;font-family: 'Proxima Nova Lt';}
+.submitBtn{font-size: 20px; font-weight: 400; color: #fff; background-color: #24E36E; border: none; width: 170px; text-align: center; padding: 14px 15px;font-family: 'Proxima Nova Lt';}
 .submitBtn:hover{background-color: #1e222d;}
 
 
@@ -299,7 +299,7 @@ header.sticky .navDexMenu li a{font-size: 16px;}
 footer{background-color: #1E222D; position: relative; padding-top: 80px;}
 footer:after{position: absolute; content: ''; left: 0; bottom: 100%; width: 100%; height: 110px; background-color: #1E222D; z-index: 0}
 
-footer h5{color: #fff;font-weight: 600;font-family: 'Proxima Nova Lt'; margin-bottom: 20px;}
+footer h5{color: #fff;font-weight: 400;font-family: 'Proxima Nova Lt'; margin-bottom: 20px;}
 
 .fLogo{margin-bottom: 30px;}
 
@@ -311,14 +311,14 @@ footer h5{color: #fff;font-weight: 600;font-family: 'Proxima Nova Lt'; margin-bo
 
 .f_links{}
 .f_links li{margin-bottom: 30px;}
-.f_links li a{font-size: 18px; color: #fff; font-weight: 600;font-family: 'Proxima Nova Lt';}
+.f_links li a{font-size: 18px; color: #fff; font-weight: 400;font-family: 'Proxima Nova Lt';}
 .f_links li a:hover{color: #24E36E;}
 
 .newsletterCol{}
 .newsletterCol p{color: #EAEAEA; margin-bottom: 35px;}
 .newsletterForm{display: flex;}
 .newsletterForm input{font-size: 14px; color: #fff; background-color: rgba(255,255,255,0.1); height: 44px; border: none; width: 100%; padding: 5px 15px;}
-.newsletterForm button{width: 120px; min-width: 120px; height: 44px; font-size: 14px; color: #0F2F44; font-weight: 600;  background-color: #24E36E; border: none;}
+.newsletterForm button{width: 120px; min-width: 120px; height: 44px; font-size: 14px; color: #0F2F44; font-weight: 400;  background-color: #24E36E; border: none;}
 .newsletterForm button:hover{background-color: #fff;}
 
 
@@ -334,19 +334,19 @@ footer h5{color: #fff;font-weight: 600;font-family: 'Proxima Nova Lt'; margin-bo
 #LoginModal .modal-title{color: #fff; font-size: 24px;}
 .modalLoginForm{}
 .modalLoginForm .form-group label{font-size: 18px; color: #EAEAEA;}
-.modalLoginForm .form-group input{width: 100%; font-size: 18px; color: #1E222D; padding: 14px 15px; background-color: #fff; border: none; font-weight: 600;}
+.modalLoginForm .form-group input{width: 100%; font-size: 18px; color: #1E222D; padding: 14px 15px; background-color: #fff; border: none; font-weight: 400;}
 .modalLoginForm .btn_{font-size: 18px; color: #fff; border: none; background-color: #24E36E; width: 100%; padding: 14px 15px; text-align: center;}
 .modalLoginForm .fp{color: #24E36E; font-size: 18px; margin-top: 5px;}
 .modalLoginForm .fp:hover{color: #fff;}
 #LoginModal .close{color: #fff; opacity: 1; padding: 18px 20px; position: absolute; right: 0px; font-size: 16px; font-weight: normal; text-shadow: none; display: inline-flex; align-items: center;}
 #LoginModal .close i{font-size: 20px; margin-left: 15px;}
 
-#BecomeStreamerModal{background: url(../images/bg_2.jpg) center no-repeat; background-size: cover;}
-#BecomeStreamerModal .modal-content{background-color: transparent; border: none;}
-#BecomeStreamerModal .modal-header{border: none;}
-#BecomeStreamerModal .modal-title{color: #fff; font-size: 24px;}
-#BecomeStreamerModal .close{color: #fff; opacity: 1; padding: 18px 20px; position: absolute; right: 0px; font-size: 16px; font-weight: normal; text-shadow: none; display: inline-flex; align-items: center;}
-#BecomeStreamerModal .close i{font-size: 20px; margin-left: 15px;}
+.BecomeStreamerModal{background: url(../images/bg_2.jpg) center no-repeat; background-size: cover;}
+.BecomeStreamerModal .modal-content{background-color: transparent; border: none;}
+.BecomeStreamerModal .modal-header{border: none;}
+.BecomeStreamerModal .modal-title{color: #fff; font-size: 24px;}
+.BecomeStreamerModal .close{color: #fff; opacity: 1; padding: 18px 20px; position: absolute; right: 0px; font-size: 16px; font-weight: normal; text-shadow: none; display: inline-flex; align-items: center;}
+.BecomeStreamerModal .close i{font-size: 20px; margin-left: 15px;}
 
 
 .noFixHeader{position: relative !important;}
@@ -420,7 +420,7 @@ footer h5{color: #fff;font-weight: 600;font-family: 'Proxima Nova Lt'; margin-bo
 .beforeNone:after{display: none;}
 
 .channelsHead{background-color: #1E222D; padding: 15px 0px 20px;}
-.channelsName{display: flex; font-size: 20px; color: #fff; align-items: center; font-weight: 600;font-family: 'Proxima Nova Lt';}
+.channelsName{display: flex; font-size: 20px; color: #fff; align-items: center; font-weight: 400;font-family: 'Proxima Nova Lt';}
 .channelsName .channel_Ic{width: 47px; height: 47px; display: inline-flex; justify-content: center; align-items: center; margin-right: 20px; background-color: #6ee370;}
 .channelsName .channel_Ic img{min-width: 100%; min-height: 100%; object-fit: cover;}
 

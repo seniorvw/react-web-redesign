@@ -11,7 +11,7 @@ class ChatMessageInputForm extends Component<IChatMessageInputFormProps> {
 
   render() {
     return (
-      <div style={{ width: "inherit" }}>
+      <div className="chatFooter">
         <Form
           style={{ display: "inline-flex", width: "100%" }}
           onKeyPress={this.handleKeyPress}
@@ -19,11 +19,11 @@ class ChatMessageInputForm extends Component<IChatMessageInputFormProps> {
           <Form.Group style={{ width: "inherit", marginRight: "12px" }} controlId="formMessage">
             <Form.Control style={{ resize: "none" }} as="textarea" rows={2} placeholder="Message" />
           </Form.Group>
-          <Button style={{ height: "60px" }} variant="success" type="submit">
-            Send
-          </Button>
+          <button style={{ outline: "none" }} type="submit">
+            <img src="images/sendMsg.svg" />
+          </button>
         </Form>
-      </div >
+      </div>
     );
   }
 
